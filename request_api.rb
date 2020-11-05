@@ -47,7 +47,7 @@ def photos_count(request)
   return num_photo
 end
 
-pp photos_count(request('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=10','eLorDluthgJMgvPDrEnXxzQOeK1bmkxJ7kx3UOW0')["photos"])
+print( photos_count(request('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=10','eLorDluthgJMgvPDrEnXxzQOeK1bmkxJ7kx3UOW0')["photos"]))
 
 
 
