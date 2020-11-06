@@ -29,11 +29,13 @@ def request(address, api_key)
       html += "\n\t\t\t<li><img src='#{pic["img_src"]}'></li>\n"
     end
     html += "\t\t</ul>\n\t</body>\n</html>"
-    return html
+
+    File.write('photos_nasa.html',html)
+    
   end
   
   photos = build_web_page(request('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=10','eLorDluthgJMgvPDrEnXxzQOeK1bmkxJ7kx3UOW0'))
-  File.write('photos_nasa.html', photos.to_s)
+  
 
 
 
